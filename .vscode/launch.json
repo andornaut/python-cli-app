@@ -1,0 +1,14 @@
+{
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Python: cliapp",
+			"type": "python",
+			"request": "launch",
+			"module": "cliapp",
+			// Set to `false` to step into 3rd party libraries?
+			"justMyCode": true,
+		}
+	]
+}
