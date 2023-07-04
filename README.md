@@ -2,6 +2,7 @@
 
 Project scaffolding to develop Command Line Interface (CLI) applications using Python.
 
+* [andornaut@github /python-exercises](https://github.com/andornaut/python-exercises)
 * [andornaut@github /til/python](https://github.com/andornaut/til/blob/master/docs/python.md)
 
 ## Getting Started
