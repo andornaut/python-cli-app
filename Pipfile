@@ -10,7 +10,7 @@ cliapp = {editable = true, path = "."}
 # Use the same version as the "Black" VS Code extension
 black = "==23.3.0"
 # Use the same version as the "Flake8" VS Code extension
-flake8 = "=5.0.4"
+flake8 = "==5.0.4"
 pytest = "*"
 
 [requires]
