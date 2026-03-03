@@ -3,7 +3,7 @@ from typing import Optional
 import typer
 from cliapp import __app_name__, __version__
 
-app = typer.Typer(add_completion=False, no_args_is_help=True)
+app = typer.Typer(add_completion=False)
 
 
 @app.command()
@@ -13,12 +13,14 @@ def hello(name: str = "world"):
 
 @app.callback(invoke_without_command=True)
 def default(
-    version: Optional[bool] = typer.Option(
-        None,
+    ctx: typer.Context,
+    version: bool = typer.Option(
+        False,
         "--version",
         "-v",
         help="Show the application's version and exit.",
         is_eager=True,
+        flag_value=True,
     )
 ) -> None:
     """
@@ -26,4 +28,7 @@ def default(
     """
     if version:
         typer.echo(f"{__app_name__} v{__version__}")
+        raise typer.Exit()
+    if ctx.invoked_subcommand is None:
+        typer.echo(ctx.get_help())
         raise typer.Exit()
