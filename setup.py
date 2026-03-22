@@ -18,6 +18,6 @@ setup(
     cliapp=cliapp.__main__:main
     """,
     install_requires=[
-        "typer>=0.9.0",
+        "typer>=0.23.0",
     ],
 )
